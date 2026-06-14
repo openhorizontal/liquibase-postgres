@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: liquibase-postgres
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: liquibase-postgres
+          image: PLACEHOLDER
+          imagePullPolicy: IfNotPresent
+          args: ["--changelog-file=migrations/changelog.yaml", "update"]
+          envFrom:
+            - configMapRef:
+                name: liquibase-postgres-config
+            - secretRef:
+                name: liquibase-postgres-secret
