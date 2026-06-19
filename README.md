@@ -2,7 +2,7 @@
 
 ## Docker
 
-See [db/README.md](db/README.md).
+See [db/README.md](db/).
 
 ## Kubernetes
 
