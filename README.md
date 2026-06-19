@@ -1,4 +1,4 @@
-# Postgres Migrations
+# Liquibase Postgres
 
 ## Docker
 
